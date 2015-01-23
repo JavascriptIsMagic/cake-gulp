@@ -1,0 +1,35 @@
+{
+  "name": "cake-gulp",
+  "version": "0.1.0",
+  "description": "Use all those wonderful gulp plugins from your Cakefile",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javascriptismagic/cake-gulp.git"
+  },
+  "keywords": [
+    "cake",
+    "cakefile",
+    "gulp",
+    "gulpfile",
+    "coffee",
+    "coffeescript",
+    "coffee-script"
+  ],
+  "author": "Brian <javascriptismagic@gmail.com>",
+  "license": "Public Domain <Unlicense>",
+  "bugs": {
+    "url": "https://github.com/javascriptismagic/cake-gulp/issues"
+  },
+  "homepage": "https://github.com/javascriptismagic/cake-gulp",
+  "dependencies": {
+    "cake": "0",
+    "coffee-script": "1",
+    "del": "1",
+    "gulp": "3",
+    "gulp-coffee": "2",
+    "gulp-rename": "1",
+    "gulp-sourcemaps": "1",
+    "gulp-util": "3"
+  }
+}
