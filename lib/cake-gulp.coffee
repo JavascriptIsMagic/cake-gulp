@@ -11,6 +11,9 @@ utilities = require 'gulp-util'
 for own utility of utilities
   global[utility] = utilities[utility]
 
+for own color in colors
+  global[color] = colors[color].bind colors
+
 task = global.task
 global.task = (name, description, tasks...) ->
   action = tasks.pop()
