@@ -1,5 +1,6 @@
 global.gulp = module.exports = require 'gulp'
 global.sourcemaps = require 'gulp-sourcemaps'
+global.source = require 'vinyl-source-stream'
 global.coffee = require 'gulp-coffee'
 global.src = gulp.src.bind gulp
 global.dest = gulp.dest.bind gulp
@@ -28,3 +29,12 @@ global.task = (name, description, tasks...) ->
   else
     gulp.task name, tasks, ->
       action options
+
+# Pretty your paths for logging
+# shortens paths to the closest node module folder
+# colors the node module name as well as non-word characters
+global.colorpath = (filepath) ->
+  "#{filepath}"
+    .replace /^.*node_modules[\/\\]+/, ''
+    .replace /^[^\\\/]+/g, green '$&'
+    .replace /\W+/g, cyan '$&'
