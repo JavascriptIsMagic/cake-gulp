@@ -33,8 +33,11 @@ global.task = (name, description, tasks...) ->
 # Pretty your paths for logging
 # shortens paths to the closest node module folder
 # colors the node module name as well as non-word characters
-global.colorpath = (filepath) ->
+global.fancypath = (filepath) ->
   "#{filepath}"
     .replace /^.*node_modules[\/\\]+/, ''
-    .replace /^[^\\\/]+/g, green '$&'
-    .replace /\W+/g, cyan '$&'
+    .replace /^([^\\\/]+)|\W+/g, (symbols, module) ->
+      if module
+        green module
+      else
+        cyan symbols
