@@ -1,6 +1,6 @@
 {
   "name": "cake-gulp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Use all those wonderful gulp plugins from your Cakefile",
   "main": "index.js",
   "repository": {
@@ -30,6 +30,7 @@
     "gulp-coffee": "2",
     "gulp-rename": "1",
     "gulp-sourcemaps": "1",
-    "gulp-util": "3"
+    "gulp-util": "3",
+    "vinyl-source-stream": "1"
   }
 }
