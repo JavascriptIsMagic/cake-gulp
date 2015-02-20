@@ -7,6 +7,7 @@ global.dest = gulp.dest.bind gulp
 global.watch = gulp.watch.bind gulp
 global.rename = require 'gulp-rename'
 global.del = require 'del'
+global.cson = require 'require-cson'
 
 utilities = require 'gulp-util'
 for own utility of utilities
