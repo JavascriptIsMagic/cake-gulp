@@ -2,6 +2,7 @@ global.gulp = module.exports = require 'gulp'
 global.sourcemaps = require 'gulp-sourcemaps'
 global.source = require 'vinyl-source-stream'
 global.coffee = require 'gulp-coffee'
+global.debug = require 'gulp-debug'
 global.src = gulp.src.bind gulp
 global.dest = gulp.dest.bind gulp
 global.watch = gulp.watch.bind gulp
