@@ -1,6 +1,6 @@
 {
   "name": "cake-gulp",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Use all those wonderful gulp plugins from your Cakefile",
   "main": "index.js",
   "repository": {
