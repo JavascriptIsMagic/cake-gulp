@@ -1,6 +1,7 @@
 global.gulp = module.exports = require 'gulp'
 global.sourcemaps = require 'gulp-sourcemaps'
 global.source = require 'vinyl-source-stream'
+global.cached = require 'gulp-cached'
 global.coffee = require 'gulp-coffee'
 global.debug = require 'gulp-debug'
 global.src = gulp.src.bind gulp
