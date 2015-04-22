@@ -1,15 +1,20 @@
 global.gulp = module.exports = require 'gulp'
 global.sourcemaps = require 'gulp-sourcemaps'
 global.source = require 'vinyl-source-stream'
-global.cached = require 'gulp-cached'
-global.coffee = require 'gulp-coffee'
-global.debug = require 'gulp-debug'
+
 global.src = gulp.src.bind gulp
 global.dest = gulp.dest.bind gulp
 global.watch = gulp.watch.bind gulp
+global.coffee = require 'gulp-coffee'
+global.debug = require 'gulp-debug'
 global.rename = require 'gulp-rename'
 global.del = require 'del'
 global.cson = require 'require-cson'
+# for incrimental building:
+global.changed = require 'gulp-changed'
+global.cached = require 'gulp-cached'
+global.remember = require 'gulp-remember'
+global.newer = require 'gulp-newer'
 
 utilities = require 'gulp-util'
 for own utility of utilities
