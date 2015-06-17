@@ -17,7 +17,7 @@
     "coffee-script"
   ],
   "author": "Brian <javascriptismagic@gmail.com>",
-  "license": "Public Domain <Unlicense>",
+  "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/javascriptismagic/cake-gulp/issues"
   },
