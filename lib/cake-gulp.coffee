@@ -1,51 +1,44 @@
-global.gulp = module.exports = require 'gulp'
-global.sourcemaps = require 'gulp-sourcemaps'
-global.source = require 'vinyl-source-stream'
+# npm i -save require-cson@latest tempgulp4@latest gulp-util@latest gulp-coffee@latest gulp-sourcemaps@latest gulp-git@latest gulp-debug@latest gulp-size@latest gulp-rename@latest gulp-uglify@latest gulp-concat@latest gulp-gzip@latest del@latest gulp-changed@latest gulp-cached@latest gulp-remember@latest gulp-newer@latest gulp-duration@latest gulp-if@latest gulp-foreach@latest merge-stream@latest vinyl-source-stream@latest vinyl-buffer@latest
 
-global.src = gulp.src.bind gulp
-global.dest = gulp.dest.bind gulp
-global.watch = gulp.watch.bind gulp
-global.coffee = require 'gulp-coffee'
-global.debug = require 'gulp-debug'
-global.rename = require 'gulp-rename'
-global.del = require 'del'
-global.cson = require 'require-cson'
-# for incrimental building:
-global.changed = require 'gulp-changed'
-global.cached = require 'gulp-cached'
-global.remember = require 'gulp-remember'
-global.newer = require 'gulp-newer'
+# Gulp 4+
+global.gulp = module.exports = require 'tempgulp4'
+for key, value of gulp when typeof value is 'function'
+  gulp[key] = value.bind gulp
 
+# Utility and Logging:
 utilities = require 'gulp-util'
-for own utility of utilities
-  global[utility] = utilities[utility]
+for own utility of utilities when utility isnt 'env'
+  gulp[utility] = utilities[utility]
+gulp.debug = require 'gulp-debug'
+gulp.size = require 'gulp-size'
+gulp.duration = require 'gulp-duration'
 
-for own color of colors.styles
-  global[color] = colors[color]
+# Coffeescript and Sourcemaps:
+global.CSON = require 'require-cson'
+gulp.sourcemaps = require 'gulp-sourcemaps'
+gulp.coffee = require 'gulp-coffee'
+gulp.uglify = require 'gulp-uglify'
 
-task = global.task
-global.task = (name, description, tasks...) ->
-  action = tasks.pop()
-  if Array.isArray tasks[0]
-    tasks = tasks[0]
-  task name, description, (options) ->
-    global.options = options
-    gulp.start name
-  if action.length > 1
-    gulp.task name, tasks, (callback) ->
-      action options, callback
-  else
-    gulp.task name, tasks, ->
-      action options
+# File Manipulation:
+gulp.rename = require 'gulp-rename'
+gulp.concat = require 'gulp-concat'
+gulp.gzip = require 'gulp-gzip'
+gulp.delete = gulp.del = require 'del'
+gulp.git = require 'gulp-git'
 
-# Pretty your paths for logging
-# shortens paths to the closest node module folder
-# colors the node module name as well as non-word characters
-global.fancypath = (filepath) ->
-  "#{filepath}"
-    .replace /^.*node_modules[\/\\]+/, ''
-    .replace /^([^\\\/]+)|\W+/g, (symbols, module) ->
-      if module
-        green module
-      else
-        cyan symbols
+# Incrimental Builds:
+gulp.changed = require 'gulp-changed'
+gulp.cached = require 'gulp-cached'
+gulp.remember = require 'gulp-remember'
+gulp.newer = require 'gulp-newer'
+
+# Stream Flow Control:
+# Gulp4 already comes with gulp.series and gulp.parallel
+gulp.if = gulp.upon = require 'gulp-if'
+gulp.foreach = require 'gulp-foreach'
+gulp.merge = require 'merge-stream'
+gulp.source = require 'vinyl-source-stream'
+gulp.buffer = require 'vinyl-buffer'
+
+# Intigrate Task Runner:
+global.task = require './task.coffee'
