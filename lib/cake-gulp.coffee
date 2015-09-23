@@ -5,14 +5,6 @@ global.gulp = module.exports = require 'tempgulp4'
 for key, value of gulp when typeof value is 'function'
   gulp[key] = value.bind gulp
 
-# Utility and Logging:
-utilities = require 'gulp-util'
-for own utility of utilities when utility isnt 'env'
-  gulp[utility] = utilities[utility]
-gulp.debug = require 'gulp-debug'
-gulp.size = require 'gulp-size'
-gulp.duration = require 'gulp-duration'
-
 # Coffeescript and Sourcemaps:
 global.CSON = require 'require-cson'
 gulp.sourcemaps = require 'gulp-sourcemaps'
@@ -37,8 +29,17 @@ gulp.newer = require 'gulp-newer'
 gulp.if = gulp.upon = require 'gulp-if'
 gulp.foreach = require 'gulp-foreach'
 gulp.merge = require 'merge-stream'
+gulp.combine = require 'multipipe'
 gulp.source = require 'vinyl-source-stream'
 gulp.buffer = require 'vinyl-buffer'
+
+# Utility and Logging:
+gulp.util = require 'gulp-util'
+gulp.log = gulp.util.log
+gulp.colors = gulp.util.colors
+gulp.debug = require 'gulp-debug'
+gulp.size = require 'gulp-size'
+gulp.duration = require 'gulp-duration'
 
 # Intigrate Task Runner:
 global.task = require './task.coffee'

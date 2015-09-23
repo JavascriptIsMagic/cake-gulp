@@ -4,9 +4,9 @@ gulp = require 'tempgulp4'
 unless gulp.colors? then cyan = green = red = bgRed = (text) -> text
 
 task = global.task
-module.exports = (name, description, tasks...) ->
+global.task = module.exports = (name, description, tasks...) ->
   gulp.task name, tasks...
   task name, description, (options) ->
     global.options = gulp.options = options
     invoker = gulp.series name
-    invoker (error) -> if error then gulp.log? red "🎂 #{name} #{error.message or "#{error}"} \n\n#{error.stack}\n"
+    invoker (error) -> if error then gulp.log? red "#{name} #{error.message or "#{error}"} \n\n#{error.stack}\n"
