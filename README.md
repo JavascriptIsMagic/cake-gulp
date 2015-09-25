@@ -62,42 +62,44 @@ task 'build', 'Build all the things! -w to watch for changes.',
 `cake-gulp` comes with some common generic gulp plugins that should be useful in just about any build process. All gulp plugins are bound to the `gulp` object.
 
 # Coffeescript and Sourcemaps
-[`CSON`](https://www.npmjs.com/package/cson) is a global like `JSON` but for Coffeescript. You may also wish to use `require("./something.cson")`
-[gulp.sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) you may wish to [check out this wiki for compatable sourcemap gulp plugins!](https://github.com/floridoo/gulp-sourcemaps/wiki/Plugins-with-gulp-sourcemaps-support)
-[gulp.coffee](https://www.npmjs.com/package/gulp-coffee)
-[gulp.uglify](https://www.npmjs.com/package/gulp-uglify)
+* [`CSON`](https://www.npmjs.com/package/cson) is a global like `JSON` but for Coffeescript. You may also wish to use `require("./something.cson")`
+* [gulp.sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) you may wish to [check out this wiki for compatable sourcemap gulp plugins!](https://github.com/floridoo/gulp-sourcemaps/wiki/Plugins-with-gulp-sourcemaps-support)
+* [gulp.coffee](https://www.npmjs.com/package/gulp-coffee)
+* [gulp.uglify](https://www.npmjs.com/package/gulp-uglify)
 
 # File Manipulation
-[gulp.rename](https://www.npmjs.com/package/gulp-rename)
-[gulp.concat](https://www.npmjs.com/package/gulp-concat)
-[gulp.gzip](https://www.npmjs.com/package/gulp-gzip)
-[gulp.del or gulp.delete](https://www.npmjs.com/package/del)
-[gulp.git](https://www.npmjs.com/package/gulp-git)
+* [gulp.rename](https://www.npmjs.com/package/gulp-rename)
+* [gulp.concat](https://www.npmjs.com/package/gulp-concat)
+* [gulp.gzip](https://www.npmjs.com/package/gulp-gzip)
+* [gulp.del or gulp.delete](https://www.npmjs.com/package/del)
+* [gulp.git](https://www.npmjs.com/package/gulp-git)
 
 # Incrimental Builds
-[gulp.changed](https://www.npmjs.com/package/gulp-changed)
-[gulp.cached](https://www.npmjs.com/package/gulp-cached)
-[gulp.remember](https://www.npmjs.com/package/gulp-remember)
-[gulp.newer](https://www.npmjs.com/package/gulp-newer)
+* [gulp.changed](https://www.npmjs.com/package/gulp-changed)
+* [gulp.cached](https://www.npmjs.com/package/gulp-cached)
+* [gulp.remember](https://www.npmjs.com/package/gulp-remember)
+* [gulp.newer](https://www.npmjs.com/package/gulp-newer)
 
 # Stream Flow Control
-[gulp.series](https://www.npmjs.com/package/undertaker#series-taskname-fn-function)
-[gulp.parallel](https://www.npmjs.com/package/undertaker#parallel-taskname-fn-function)
-[gulp.upon or gulp.if](https://www.npmjs.com/package/gulp-if)
-[gulp.foreach](https://www.npmjs.com/package/gulp-foreach)
-[gulp.merge](https://www.npmjs.com/package/merge-stream)
-[gulp.combine](https://www.npmjs.com/package/multipipe)
-[gulp.source](https://www.npmjs.com/package/vinyl-source-stream)
-[gulp.buffer](https://www.npmjs.com/package/vinyl-buffer)
+* [gulp.series](https://www.npmjs.com/package/undertaker#series-taskname-fn-function)
+* [gulp.parallel](https://www.npmjs.com/package/undertaker#parallel-taskname-fn-function)
+* [gulp.upon or gulp.if](https://www.npmjs.com/package/gulp-if)
+* [gulp.foreach](https://www.npmjs.com/package/gulp-foreach)
+* [gulp.merge](https://www.npmjs.com/package/merge-stream)
+* [gulp.combine](https://www.npmjs.com/package/multipipe)
+* [gulp.source](https://www.npmjs.com/package/vinyl-source-stream)
+* [gulp.buffer](https://www.npmjs.com/package/vinyl-buffer)
 
 # Utility and Logging
-[gulp.util](https://www.npmjs.com/package/gulp-util)
-[gulp.size](https://www.npmjs.com/package/gulp-size)
-[gulp.duration](https://www.npmjs.com/package/gulp-duration)
-[gulp.debug](https://www.npmjs.com/package/gulp-debug)
-[gulp.log](https://www.npmjs.com/package/gulp-util#log-msg)
-[gulp.colors](https://github.com/chalk/chalk)
+* [gulp.util](https://www.npmjs.com/package/gulp-util)
+* [gulp.size](https://www.npmjs.com/package/gulp-size)
+* [gulp.duration](https://www.npmjs.com/package/gulp-duration)
+* [gulp.debug](https://www.npmjs.com/package/gulp-debug)
+* [gulp.log](https://www.npmjs.com/package/gulp-util#log-msg)
+* [gulp.colors](https://github.com/chalk/chalk)
 
+# License
 [Public Domain (Unlicense)](http://unlicense.org/)
+
 
 ![cake-gulp](http://i.imgur.com/X1JMoPF.png)
