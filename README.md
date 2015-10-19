@@ -90,12 +90,12 @@ task 'build', 'Build all the things! -w to watch for changes.',
 * [gulp.source](https://www.npmjs.com/package/vinyl-source-stream)
 * [gulp.buffer](https://www.npmjs.com/package/vinyl-buffer)
 
-# Utility and Logging
-* [gulp.util](https://www.npmjs.com/package/gulp-util)
+# Logging
 * [gulp.size](https://www.npmjs.com/package/gulp-size)
 * [gulp.duration](https://www.npmjs.com/package/gulp-duration)
 * [gulp.debug](https://www.npmjs.com/package/gulp-debug)
-* [gulp.log](https://www.npmjs.com/package/gulp-util#log-msg)
+* [gulp.logger](https://www.npmjs.com/package/glogg)
+* [gulp.log](https://www.npmjs.com/package/glogg#logger-info-msg)
 * [gulp.colors](https://github.com/chalk/chalk)
 
 # License
