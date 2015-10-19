@@ -34,9 +34,9 @@ gulp.source = require 'vinyl-source-stream'
 gulp.buffer = require 'vinyl-buffer'
 
 # Utility and Logging:
-gulp.util = require 'gulp-util'
-gulp.log = gulp.util.log
-gulp.colors = gulp.util.colors
+gulp.logger = require 'glogg'
+gulp.log = gulp.logger('gulp').info
+gulp.colors = require 'chalk'
 gulp.debug = require 'gulp-debug'
 gulp.size = require 'gulp-size'
 gulp.duration = require 'gulp-duration'
