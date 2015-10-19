@@ -1,7 +1,7 @@
 # cake-gulp
 Stuff your face with all those wonderful [Gulp](https://www.npmjs.com/package/tempgulp4) plugins from your Cakefile!
 
-# WARNING: This branch uses [`tempgulp4`](https://www.npmjs.com/package/tempgulp4) as Gulp 4 has not yet officially released at the time of this writing.
+# WARNING: This is a preview release. This branch uses [`tempgulp4`](https://www.npmjs.com/package/tempgulp4) as Gulp 4 has not yet officially released at the time of this writing.
 
 `cake-gulp` integrates `cake`'s descriptive build task system and commandline argument parsing into gulp tasks, allowing for clean descriptive task management.
 
