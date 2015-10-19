@@ -1,6 +1,6 @@
 {
   "name": "cake-gulp4",
-  "version": "4.0.01-alpha",
+  "version": "4.0.0-alpha.2",
   "description": "Use all those wonderful gulp plugins from your Cakefile",
   "main": "index.js",
   "repository": {
@@ -47,6 +47,8 @@
     "require-cson": "0",
     "tempgulp4": "*",
     "vinyl-buffer": "1",
-    "vinyl-source-stream": "1"
+    "vinyl-source-stream": "1",
+    "chalk": "^1.1.1",
+    "glogg": "^1.0.0"
   }
 }
